@@ -439,6 +439,20 @@
           </execution>
         </executions>
       </plugin>
+      <plugin>
+		  <groupId>org.pitest</groupId>
+		  <artifactId>pitest-maven</artifactId>
+		  <version>1.7.0</version>
+		  <configuration>
+		    <targetClasses>
+		      <param>org.joda.time.*</param>
+		    </targetClasses>
+		    <targetTests>
+		      <param>projectCOE891.*</param>
+		    </targetTests>
+		  </configuration>
+	</plugin>
+
       <!-- Compile TZDB -->
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
@@ -901,7 +915,7 @@
     <profile>
       <id>java5to7</id>
       <activation>
-        <jdk>[1.5,1.8]</jdk>
+        <jdk>[1.8]</jdk>
       </activation>
       <properties>
         <maven-surefire-plugin.version>2.19.1</maven-surefire-plugin.version>
@@ -1103,9 +1117,9 @@
     <nexus-staging-maven-plugin.version>1.6.13</nexus-staging-maven-plugin.version>
 
     <!-- Properties for maven-compiler-plugin -->
-    <maven.compiler.compilerVersion>1.5</maven.compiler.compilerVersion>
-    <maven.compiler.source>1.5</maven.compiler.source>
-    <maven.compiler.target>1.5</maven.compiler.target>
+    <maven.compiler.compilerVersion>1.8</maven.compiler.compilerVersion>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
     <maven.compiler.fork>true</maven.compiler.fork>
     <maven.compiler.verbose>false</maven.compiler.verbose>
     <maven.compiler.debug>true</maven.compiler.debug>

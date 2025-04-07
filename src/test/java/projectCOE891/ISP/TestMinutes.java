@@ -5,7 +5,7 @@
  */
 
 
-package projectCOE891;
+package projectCOE891.ISP;
 
 import static org.junit.Assert.*;
 
@@ -34,7 +34,6 @@ public class TestMinutes {
 	 *| Null input      | No nulls           |start or end is null|			-		  |
 	 * 
 	 */
-	
 	
 	
 	@Test
@@ -70,7 +69,6 @@ public class TestMinutes {
 
         int minutesInADay = 1440; // 24 hours * 60 minutes
         Minutes minutes = Minutes.minutesBetween(start, end);
-        System.out.println(minutes.getMinutes());
         assertEquals(minutesInADay, minutes.getMinutes()); 
     }
 

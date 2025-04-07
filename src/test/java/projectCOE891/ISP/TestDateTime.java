@@ -4,7 +4,7 @@
  * Ahmad El-Gohary
  */
 
-package projectCOE891;
+package projectCOE891.ISP;
 
 import static org.junit.Assert.*;
 
