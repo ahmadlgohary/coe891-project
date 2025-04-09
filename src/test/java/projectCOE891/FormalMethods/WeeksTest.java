@@ -46,3 +46,22 @@ public class WeeksTest {
 
                 Weeks a = Weeks.weeks(WEEK_VALUES[i]);
                 Weeks b = Weeks.weeks(WEEK_VALUES[j]);
+
+                Weeks sum1 = a.plus(b);
+                Weeks sum2 = b.plus(a);
+
+                assertEquals(sum1.getWeeks(), sum2.getWeeks());
+            }
+        }
+    }
+
+    @Test
+    public void testPlusIdentity() {
+        for (int value : WEEK_VALUES) {
+            Weeks w = Weeks.weeks(value);
+            Weeks sum = w.plus(Weeks.ZERO);
+
+            assertEquals(value, sum.getWeeks());
+        }
+    }
+}
